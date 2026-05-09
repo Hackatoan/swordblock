@@ -1,0 +1,25 @@
+{
+	"schemaVersion": 1,
+	"id": "swordblock",
+	"version": "${version}",
+	"name": "SwordBlock",
+	"description": "Hides shields and shows a blocking arm pose when right-clicking with a sword. Cosmetic only.",
+	"authors": [
+		"hackatoa"
+	],
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.hackatoa.swordblock.client.SwordBlockClient"
+		]
+	},
+	"mixins": [
+		"swordblock.client.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
