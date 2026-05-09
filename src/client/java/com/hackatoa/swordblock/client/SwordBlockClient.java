@@ -14,8 +14,7 @@ public class SwordBlockClient implements ClientModInitializer {
             }
             boolean hasSword = client.player.getMainHandItem().is(ItemTags.SWORDS);
             boolean rightMouseDown = client.options.keyUse.isDown();
-            boolean notUsingItem = !client.player.isUsingItem();
-            SwordBlockState.active = hasSword && rightMouseDown && notUsingItem;
+            SwordBlockState.active = hasSword && rightMouseDown;
         });
     }
 }
