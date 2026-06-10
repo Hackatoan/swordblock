@@ -13,3 +13,8 @@ build/
 
 # Fabric Loom cache (downloaded at build time)
 run/
+
+# Java
+out/
+*.log
+*.log.*
