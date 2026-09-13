@@ -1,32 +1,40 @@
-[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/hackatoa)
-
 # SwordBlock
 
-A cosmetic-only Fabric client mod for Minecraft 26.1.2. Hides your shield and shows a sword-blocking arm pose when you right-click while holding a sword — bringing back the pre-1.9 visual feel.
+A cosmetic Fabric client mod for Minecraft 26.1.2 — hides shields and shows a blocking arm pose when right-clicking with a sword.
+
+☕ **Support:** [Buy Me a Coffee](https://buymeacoffee.com/hackatoa)
+
+## Overview
+
+A purely cosmetic client-side mod that restores the old sword-blocking look: right-clicking with a sword shows a blocking arm pose, and shields are hidden. No gameplay effect.
 
 ## Features
 
-- Replaces the shield model with the old sword-blocking arm pose
-- Purely cosmetic — no gameplay changes, no server-side component
-- Compatible with Iris shaders
+- Sword right-click blocking pose (cosmetic)
+- Hides shields
+- Client-side only — works on any server
 
-## Installation
+## Tech Stack
 
-1. Install [Fabric Loader](https://fabricmc.net/use/) for Minecraft 26.1.2
-2. Install [Fabric API](https://modrinth.com/mod/fabric-api)
-3. Download `swordblock.jar` from [Releases](../../releases/latest)
-4. Drop the JAR into your `mods/` folder and launch Minecraft
+Java · Fabric · Gradle (Minecraft 26.1.2)
 
-## Build from source
+## Build
 
 ```bash
-git clone https://github.com/Hackatoan/swordblock
-cd swordblock
 ./gradlew build
+# jar is written to build/libs/
 ```
 
-Output: `build/libs/swordblock-*.jar`
+## Install
+
+Requires Fabric Loader + Fabric API. Drop the built jar into your `mods/` folder.
+
+## Support
+
+If this project is useful to you, consider supporting development:
+
+☕ **[Buy Me a Coffee](https://buymeacoffee.com/hackatoa)**
 
 ---
 
-[hackatoa.com](https://hackatoa.com) · [GitHub](https://github.com/Hackatoan) · [Buy Me A Coffee](https://buymeacoffee.com/hackatoa)
+Part of the **[Hackatoa](https://hackatoa.com)** ecosystem — self-hosted apps, browser games, and bots. · [All repositories »](https://github.com/Hackatoan)
