@@ -38,7 +38,7 @@ public class MixinItemInHandRenderer {
                      shift = At.Shift.BEFORE,
                      ordinal = 1))
     private void swordblock$applyBlockingPose(AbstractClientPlayer player, float partialTick, float pitch, InteractionHand hand, float swingProgress, ItemStack item, float equipProgress, PoseStack poseStack, SubmitNodeCollector collector, int packedLight, CallbackInfo ci) {
-        if (hand == InteractionHand.MAIN_HAND && SwordBlockState.active && item.is(ItemTags.SWORDS)) {
+        if (hand == InteractionHand.MAIN_HAND && SwordBlockState.active) {
             poseStack.translate(-0.14142136f, 0.08f, 0.14142136f);
             poseStack.mulPose(Axis.XP.rotationDegrees(-102.25f));
             poseStack.mulPose(Axis.YP.rotationDegrees(13.365f));
