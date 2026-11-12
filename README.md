@@ -1,6 +1,6 @@
 # SwordBlock
 
-A cosmetic Fabric client mod for Minecraft 26.1.2 — hides shields and shows a blocking arm pose when right-clicking with a sword.
+A cosmetic Fabric client mod for Minecraft 26.3 — hides shields and shows a blocking arm pose when right-clicking with a sword.
 
 ☕ **Support:** [Buy Me a Coffee](https://buymeacoffee.com/hackatoa)
 
@@ -16,7 +16,7 @@ A purely cosmetic client-side mod that restores the old sword-blocking look: rig
 
 ## Tech Stack
 
-Java · Fabric · Gradle (Minecraft 26.1.2)
+Java · Fabric · Gradle (Minecraft 26.3)
 
 ## Build
 

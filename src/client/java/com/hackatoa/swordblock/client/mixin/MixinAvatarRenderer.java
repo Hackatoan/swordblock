@@ -19,7 +19,7 @@ public class MixinAvatarRenderer {
 
     // Hide the left arm in first-person when the local player has a shield in their off-hand.
     // renderLeftHand is called by renderPlayerArm (empty main hand) and renderMapHand, both
-    // of which are first-person-only paths inside ItemInHandRenderer.
+    // of which are first-person-only paths inside FirstPersonHandsAndItemsRenderer.
     @Inject(method = "renderLeftHand", at = @At("HEAD"), cancellable = true)
     private void swordblock$renderLeftHand(PoseStack poseStack, SubmitNodeCollector collector, int light, Identifier texture, boolean showSleeve, CallbackInfo ci) {
         Minecraft mc = Minecraft.getInstance();
