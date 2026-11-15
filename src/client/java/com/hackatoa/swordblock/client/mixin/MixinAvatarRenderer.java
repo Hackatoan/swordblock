@@ -1,5 +1,6 @@
 package com.hackatoa.swordblock.client.mixin;
 
+import com.hackatoa.swordblock.client.SwordBlockState;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -23,7 +24,7 @@ public class MixinAvatarRenderer {
     @Inject(method = "renderLeftHand", at = @At("HEAD"), cancellable = true)
     private void swordblock$renderLeftHand(PoseStack poseStack, SubmitNodeCollector collector, int light, Identifier texture, boolean showSleeve, CallbackInfo ci) {
         Minecraft mc = Minecraft.getInstance();
-        if (mc.player != null && mc.player.getOffhandItem().getItem() instanceof ShieldItem) {
+        if (SwordBlockState.enabled && mc.player != null && mc.player.getOffhandItem().getItem() instanceof ShieldItem) {
             ci.cancel();
         }
     }
