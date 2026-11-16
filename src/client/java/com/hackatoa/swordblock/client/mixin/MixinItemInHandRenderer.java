@@ -24,7 +24,7 @@ public class MixinItemInHandRenderer {
 
     @Inject(method = "submitArmWithItem", at = @At("HEAD"), cancellable = true)
     private void swordblock$cancelShield(PlayerRenderState playerState, FirstPersonHandsAndItemsRenderState handsState, float partialTick, float pitch, InteractionHand hand, float swingProgress, ItemStack item, float equipProgress, PoseStack poseStack, SubmitNodeCollector collector, int packedLight, CallbackInfo ci) {
-        if (SwordBlockState.enabled && hand == InteractionHand.OFF_HAND && item.getItem() instanceof ShieldItem) {
+        if (SwordBlockState.shouldHideShields() && hand == InteractionHand.OFF_HAND && item.getItem() instanceof ShieldItem) {
             ci.cancel();
         }
     }

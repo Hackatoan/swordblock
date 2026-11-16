@@ -1,5 +1,8 @@
 {
   "key.swordblock.toggle": "Toggle SwordBlock",
+  "key.swordblock.toggle_shields": "Toggle Shield Hiding",
   "message.swordblock.enabled": "SwordBlock: enabled",
-  "message.swordblock.disabled": "SwordBlock: disabled"
+  "message.swordblock.disabled": "SwordBlock: disabled",
+  "message.swordblock.shields_hidden": "SwordBlock: shields hidden",
+  "message.swordblock.shields_shown": "SwordBlock: shields shown"
 }
