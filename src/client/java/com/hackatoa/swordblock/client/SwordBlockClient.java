@@ -16,6 +16,10 @@ public class SwordBlockClient implements ClientModInitializer {
                 "key.swordblock.toggle",
                 InputConstants.UNKNOWN.getValue(),
                 KeyMapping.Category.MISC));
+        KeyMapping shieldKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
+                "key.swordblock.toggle_shields",
+                InputConstants.UNKNOWN.getValue(),
+                KeyMapping.Category.MISC));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (toggleKey.consumeClick()) {
@@ -23,6 +27,13 @@ public class SwordBlockClient implements ClientModInitializer {
                 if (client.player != null) {
                     client.player.sendOverlayMessage(Component.translatable(
                             SwordBlockState.enabled ? "message.swordblock.enabled" : "message.swordblock.disabled"));
+                }
+            }
+            while (shieldKey.consumeClick()) {
+                SwordBlockState.hideShields = !SwordBlockState.hideShields;
+                if (client.player != null) {
+                    client.player.sendOverlayMessage(Component.translatable(
+                            SwordBlockState.hideShields ? "message.swordblock.shields_hidden" : "message.swordblock.shields_shown"));
                 }
             }
             if (client.player == null || !SwordBlockState.enabled) {

@@ -14,6 +14,7 @@ A purely cosmetic client-side mod that restores the old sword-blocking look: rig
 - Hides shields
 - Client-side only — works on any server
 - Optional toggle key (Controls → Miscellaneous → "Toggle SwordBlock", unbound by default) to turn the mod on/off in-game
+- Optional "Toggle Shield Hiding" key (also unbound by default) to show shields again while keeping the sword-blocking pose
 
 ## Tech Stack
 

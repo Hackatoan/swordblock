@@ -24,7 +24,7 @@ public class MixinAvatarRenderer {
     @Inject(method = "renderLeftHand", at = @At("HEAD"), cancellable = true)
     private void swordblock$renderLeftHand(PoseStack poseStack, SubmitNodeCollector collector, int light, Identifier texture, boolean showSleeve, CallbackInfo ci) {
         Minecraft mc = Minecraft.getInstance();
-        if (SwordBlockState.enabled && mc.player != null && mc.player.getOffhandItem().getItem() instanceof ShieldItem) {
+        if (SwordBlockState.shouldHideShields() && mc.player != null && mc.player.getOffhandItem().getItem() instanceof ShieldItem) {
             ci.cancel();
         }
     }
